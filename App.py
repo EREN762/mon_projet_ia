@@ -4,8 +4,12 @@ import pickle
 import numpy as np
 
 # Charger le modèle sauvegardé
-with open("modele_voiture.pkl", "rb") as file:
-    model = pickle.load(file)
+@st.cache_resource # Assure que le modèle n'est pas rechargé à chaque interaction
+def load_model():
+    with open("modele_voiture.pkl", "rb") as file:
+        return pickle.load(file)
+    
+model = load_model()    
 
 # Colonnes attendues par le modèle
 colonnes_model = [

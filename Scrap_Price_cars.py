@@ -1,12 +1,8 @@
 import pandas as pd # manipulation et analyse de donnée
 import numpy as np # calcule sur les matrices
-import matplotlib.pyplot as plt # pour faire des graphiques
 from sklearn.model_selection import train_test_split
-from sklearn.linear_model import LinearRegression
 from sklearn.metrics import mean_absolute_error, mean_squared_error, r2_score
-from sklearn.preprocessing import StandardScaler
 from sklearn.ensemble import RandomForestRegressor
-import seaborn as sns
 import pickle
 
 
